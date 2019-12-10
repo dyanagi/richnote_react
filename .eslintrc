@@ -1,0 +1,11 @@
+{
+  "ignorePatterns": [
+    "src/serviceWorker.js",
+    "src/setupTests.js"
+  ],
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "standard-react"
+  ]
+}
