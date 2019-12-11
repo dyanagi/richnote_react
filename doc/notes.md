@@ -36,3 +36,9 @@ npx standard --fix
 
 - <https://draftjs.org/>
 - <https://www.youtube.com/watch?v=0k9suXgCtTA>
+
+## Bulma CSS Framework
+
+- [How to Install Bulma](https://medium.com/@thexap/how-to-setup-bulma-css-framework-with-react-under-5-minutes-a3d8c2c33a87)
+- [Bulma Variables](https://bulma.io/documentation/customize/variables/)
+
