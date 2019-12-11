@@ -1,11 +1,16 @@
 import React from 'react'
+import * as PropTypes from 'prop-types'
 
-function Panel () {
+function ButtonBase (props) {
+  const { cssClass, label } = props
   return (
-    <div className='App'>
-      Tmp
-    </div>
+    <button className={'button ' + cssClass}>{label}</button>
   )
 }
 
-export default Panel
+ButtonBase.propTypes = {
+  cssClass: PropTypes.string,
+  label: PropTypes.string
+}
+
+export default ButtonBase
