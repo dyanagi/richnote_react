@@ -6,7 +6,7 @@ import {
   RichUtils, convertToRaw
 } from 'draft-js'
 
-class RichEditor extends Component {
+class NoteEditor extends Component {
   constructor (props) {
     super(props)
     this.state = { editorState: EditorState.createEmpty() }
@@ -27,10 +27,10 @@ class RichEditor extends Component {
   }
 
   render () {
-    const raw = convertToRaw(this.state.editorState.getCurrentContent())
+    // const raw = convertToRaw(this.state.editorState.getCurrentContent())
 
     return (
-      <div className='editor'>
+      <div className='NoteEditor'>
         <button onClick={() => { this.handleBold() }}>Bold</button>
         <button onClick={() => { this.handleItalic() }}>Italic</button>
         <Editor
@@ -39,12 +39,12 @@ class RichEditor extends Component {
           placeholder='This is the editor.'
         />
 
-        <div>
-          {JSON.stringify(raw)}
-        </div>
+        {/*<div>*/}
+        {/*  {JSON.stringify(raw)}*/}
+        {/*</div>*/}
       </div>
     )
   }
 }
 
-export default RichEditor
+export default NoteEditor
