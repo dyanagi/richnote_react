@@ -1,0 +1,92 @@
+@import "variablels_color";
+
+// (1) icon line length
+$sidebar-icon-line-width: 18px;
+// (2) icon line thickness
+$sidebar-icon-line-thickness: 1px;
+// (3) icon line spacing
+$sidebar-icon-line-spacing: 6px;
+
+// Calculate the height of the icon
+$sidebar-icon-height: $sidebar-icon-line-thickness * 3 + $sidebar-icon-line-spacing * 2;
+
+$sidebar-icon-margin: 16px;
+$sidebar-icon-content-push-to-bottom: $sidebar-icon-height + $sidebar-icon-margin * 2;
+
+.sidebarIcon {
+  z-index: 9; // to be in front of the sidebar.
+  position: relative;
+  width: $sidebar-icon-line-width;
+  height: $sidebar-icon-height;
+  margin-top: $sidebar-icon-margin;
+  margin-left: $sidebar-icon-margin;
+  transition: 0.3s;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: 0; // 'top' is set for individual span (line)
+    height: $sidebar-icon-line-thickness;
+    width: 100%;
+    background-color: $link;
+    transform: rotate(0deg);
+
+    // Animation
+    transition: 0.3s;
+  }
+
+  span:nth-child(1) {
+    top: 0; // Top
+  }
+
+  span:nth-child(2), span:nth-child(3) {
+    top: $sidebar-icon-line-spacing; // Place both in the center overlaid
+  }
+
+  span:nth-child(4) {
+    top: $sidebar-icon-line-spacing*2; // Bottom
+  }
+
+  &.isActive {
+    span:nth-child(1), span:nth-child(4) {
+      // Move to the center (for animation) and shrink to hide (with animation made by `transition`)
+      top: $sidebar-icon-line-spacing;
+      left: 50%;
+      width: 0;
+    }
+
+    span:nth-child(2) {
+      transform: rotate(45deg)
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg)
+    }
+  }
+}
+
+
+.sidebarWrapper {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  z-index: 8; // to be front of the other objects.
+  top: 0;
+  left: -260px;
+
+  // Animation
+  overflow-x: hidden; // width is 0...so, hide the content.
+  transition: 245ms;
+
+  // Decoration
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: white;
+
+  // Shift down the content
+  padding-top: $sidebar-icon-content-push-to-bottom;
+
+  &.isActive {
+    left: 0;
+    width: 240px;
+  }
+}
