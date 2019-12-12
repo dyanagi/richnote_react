@@ -1,6 +1,6 @@
 import React from 'react'
 
-function NoteListActionDeleting () {
+function NotesActionDeleting () {
   return (
     <div className='App'>
       Sorting
@@ -8,4 +8,4 @@ function NoteListActionDeleting () {
   )
 }
 
-export default NoteListActionDeleting
+export default NotesActionDeleting

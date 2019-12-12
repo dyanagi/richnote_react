@@ -1,6 +1,6 @@
 import React from 'react'
 
-function NoteListHeader () {
+function NotesHeader () {
   return (
     <div className='App'>
       NoteList Header
@@ -8,4 +8,4 @@ function NoteListHeader () {
   )
 }
 
-export default NoteListHeader
+export default NotesHeader

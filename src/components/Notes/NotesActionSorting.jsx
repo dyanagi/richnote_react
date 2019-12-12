@@ -1,11 +1,11 @@
 import React from 'react'
 
-function NoteList () {
+function NotesActionSorting () {
   return (
     <div className='App'>
-      NoteList
+      Sorting
     </div>
   )
 }
 
-export default NoteList
+export default NotesActionSorting

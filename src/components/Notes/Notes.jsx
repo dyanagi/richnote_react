@@ -1,11 +1,11 @@
 import React from 'react'
 
-function NoteListCard () {
+function Notes () {
   return (
     <div className='App'>
-      NoteListCard
+      NoteList
     </div>
   )
 }
 
-export default NoteListCard
+export default Notes
