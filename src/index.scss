@@ -4,12 +4,15 @@
 @import '../node_modules/bulma/sass/base/all'; // Apply base styles globally (including mini-reset styles)
 @import '../node_modules/bulma/sass/elements/button'; // Use button styles
 @import "components/variablels_size";
+@import "components/variablels_color";
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: $background-color;
 
   // Standard font size by default
   font-size: $font-size;
