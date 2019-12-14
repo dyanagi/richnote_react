@@ -6,7 +6,7 @@ A note-taking app with rich editor built with React and Draft.js.
 
 ## Design
 
-Richnote is designed in Adobe XD.
+Richnote is designed with Adobe XD.
 
 ### Videos
 
