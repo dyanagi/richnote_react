@@ -1,0 +1,52 @@
+@import "../responsiveness";
+@import "../variables_transition";
+
+/*
+  Main: Notes and Note
+*/
+// Apply to both mobile and tablet/desktop screens.
+.main {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  // Full screen
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+
+  & > div {
+    height: 100%;
+  }
+}
+
+// For a mobile screen, line up two boxes and switch between them by changing CSS class.
+@include mobile {
+  .main {
+    transition: $transition-duration;
+
+    &.pageNote {
+      transform: translate(0); // Show the box in the left
+    }
+
+    &.pageNotes {
+      transform: translate(-100%); // Show the box in the right
+    }
+
+    & > div {
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+// For a tablet or bigger screen, display both two boxes.
+@include tablet {
+  .main {
+    & > div {
+      min-width: 50%;
+      width: 50%;
+      height: 100%;
+    }
+  }
+}

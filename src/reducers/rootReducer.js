@@ -1,5 +1,7 @@
+import { PAGE_NOTE } from '../constants/PageConstants'
+
 const initState = {
-  page: 'pageNote'
+  page: PAGE_NOTE
 }
 
 const rootReducer = (state = initState, action) => {

@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import cx from 'classnames'
 import styles from './SidebarIcon.module.scss'
 import * as PropTypes from 'prop-types'
+import { PAGE_NOTES } from '../constants/PageConstants'
 
 class SidebarIcon extends Component {
   render () {
     const { page, isSidebarActive, onClick } = this.props
 
     const pageClassname = cx({
-      [styles.pageNotes]: page === 'pageNotes'
+      [styles.pageNotes]: page === PAGE_NOTES
     })
 
     return (
