@@ -5,6 +5,29 @@
 @import "variablels_size";
 
 /*
+  Side menu and main
+*/
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+
+  // Full screen
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+
+  .sidebar {
+    flex-grow: 0; // Don't grow
+    flex-shrink: 0; // Don't shrink
+  }
+
+  .main {
+    flex-grow: 1; // Grow
+    flex-shrink: 1; // Shrink
+  }
+}
+
+/*
  Sidebar
 */
 .sidebar {
@@ -37,28 +60,5 @@
     // Always show
     position: relative;
     left: 0;
-  }
-}
-
-/*
-  Side menu and main
-*/
-.container {
-  display: flex;
-  flex-wrap: nowrap;
-
-  // Full screen
-  width: 100%;
-  height: 100vh;
-  max-height: 100vh;
-
-  .sidebar {
-    flex-grow: 0; // Don't grow
-    flex-shrink: 0; // Don't shrink
-  }
-
-  .main {
-    flex-grow: 1; // Grow
-    flex-shrink: 1; // Shrink
   }
 }
