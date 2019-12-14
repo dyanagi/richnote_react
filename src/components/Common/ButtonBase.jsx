@@ -1,16 +1,17 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
+import cx from 'classnames'
 
 function ButtonBase (props) {
-  const { cssClass, label } = props
+  const { className, label } = props
   return (
-    <button className={'button ' + cssClass}>{label}</button>
+    <button className={cx('button', className)}>{label}</button>
   )
 }
 
 ButtonBase.propTypes = {
-  cssClass: PropTypes.string,
-  label: PropTypes.string
+  className: PropTypes.string,
+  label: PropTypes.string.isRequired
 }
 
 export default ButtonBase
