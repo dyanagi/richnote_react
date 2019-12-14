@@ -39,7 +39,7 @@ class App extends Component {
     })
 
     return (
-      <div className='App'>
+      <>
         <SidebarIcon
           page={page} isSidebarActive={isSidebarActive}
           onClick={this.handleSidebarIconClick}
@@ -52,7 +52,7 @@ class App extends Component {
           </nav>
           <Main className={styles.main} page={page} />
         </div>
-      </div>
+      </>
     )
   }
 }
