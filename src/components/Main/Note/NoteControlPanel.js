@@ -2,14 +2,15 @@ import React from 'react'
 import SaveButton from '../../common/buttons/SaveButton'
 import CancelButton from '../../common/buttons/CancelButton'
 import * as PropTypes from 'prop-types'
+import Panel from '../../common/Panel'
 
 function NoteControlPanel (props) {
   const { className } = props
   return (
-    <div className={className}>
-      <SaveButton />
+    <Panel className={className}>
       <CancelButton />
-    </div>
+      <SaveButton />
+    </Panel>
   )
 }
 

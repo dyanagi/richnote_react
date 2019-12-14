@@ -1,10 +1,10 @@
 import React from 'react'
+import ButtonBase from '../base/ButtonBase'
+import styles from './CancelButton.module.scss'
 
 function CancelButton () {
   return (
-    <div className='App'>
-      Tmp
-    </div>
+    <ButtonBase className={styles.cancelButton} label='Cancel' />
   )
 }
 

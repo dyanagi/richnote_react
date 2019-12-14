@@ -1,0 +1,8 @@
+@import "../../variablels_color";
+
+.buttonBase {
+  width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: inherit; // Override the default size
+}

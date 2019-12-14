@@ -1,0 +1,12 @@
+@import "../variablels_color";
+
+.panel {
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+
+  box-shadow: 0 -3px 6px $shadow-color;
+}

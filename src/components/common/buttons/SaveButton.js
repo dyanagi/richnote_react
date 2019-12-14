@@ -1,9 +1,10 @@
 import React from 'react'
 import ButtonBase from '../base/ButtonBase'
+import styles from './SaveButton.module.scss'
 
 function SaveButton () {
   return (
-    <ButtonBase cssClass='is-primary' label='Save' />
+    <ButtonBase className={styles.saveButton} label='Save' />
   )
 }
 
