@@ -62,9 +62,11 @@
     }
   }
 
-  &.pageNotes {
-    display: none;
-    left: 0 - $sidebar-size;
+  @include mobile {
+    &.pageNotes {
+      display: none;
+      left: 0 - $sidebar-size;
+    }
   }
 
   @include desktop {

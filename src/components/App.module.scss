@@ -46,13 +46,22 @@
   box-shadow: 3px 0 6px $shadow-color;
   background-color: white;
 
-  &.pageNote.isActive {
-    // Display by adding isActive class when Note is the current page
-    left: 0;
+  @include mobile {
+    &.pageNote.isActive {
+      // Display by adding isActive class when Note is the current page on mobile
+      left: 0;
 
-    @include until($sidebar-size + 48px) {
-      // When the screen is very small, cover all screen
-      width: 100%;
+      @include until($sidebar-size + 48px) {
+        // When the screen is very small, cover all screen
+        width: 100%;
+      }
+    }
+  }
+
+  @include tablet {
+    &.isActive {
+      // Display by adding isActive class on tablet
+      left: 0;
     }
   }
 
