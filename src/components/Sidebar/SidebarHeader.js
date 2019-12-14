@@ -1,13 +1,13 @@
 import React from 'react'
 import NewIconButton from '../common/icon_buttons/NewIconButton'
-import ActionMenuIconButton from '../common/icon_buttons/ActionMenuIconButton'
+import MenuIconButton from '../common/icon_buttons/MenuIconButton'
 import styles from './SidebarHeader.module.scss'
 
 function SidebarHeader () {
   return (
     <div className={styles.sidebarHeader}>
       <NewIconButton className={styles.newBtn} />
-      <ActionMenuIconButton className={styles.menuBtn} />
+      <MenuIconButton className={styles.menuBtn} />
     </div>
   )
 }

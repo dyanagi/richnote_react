@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './NotesHeader.module.scss'
 import NewIconButton from '../../common/icon_buttons/NewIconButton'
-import ActionMenuIconButton from '../../common/icon_buttons/ActionMenuIconButton'
+import MenuIconButton from '../../common/icon_buttons/MenuIconButton'
 
 function NotesHeader () {
   return (
@@ -15,7 +15,7 @@ function NotesHeader () {
       </div>
 
       <div className={styles.menuBtn}>
-        <ActionMenuIconButton />
+        <MenuIconButton />
       </div>
     </div>
   )

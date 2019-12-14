@@ -3,7 +3,7 @@ import actionMenuIconSvg from '../../../assets/images/action_menu_icon.svg'
 import ImageButtonBase from '../base/ImageButtonBase'
 import * as PropTypes from 'prop-types'
 
-function ActionMenuIconButton (props) {
+function MenuIconButton (props) {
   const { className } = props
   return (
     <ImageButtonBase
@@ -13,8 +13,8 @@ function ActionMenuIconButton (props) {
   )
 }
 
-export default ActionMenuIconButton
+export default MenuIconButton
 
-ActionMenuIconButton.propTypes = {
+MenuIconButton.propTypes = {
   className: PropTypes.string
 }
