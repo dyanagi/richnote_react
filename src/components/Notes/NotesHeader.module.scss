@@ -1,0 +1,45 @@
+@import "../variablels_margin";
+@import "../variablels_color";
+@import "../variablels_size";
+
+.noteHeader {
+  // Size
+  width: 100%;
+  height: 55px;
+
+  // White space
+  padding-left: 50px;
+  padding-right: $outer-margin-left-and-right / 4;
+  margin-bottom: 3px; // Push down the content to make space for the shadow
+
+  // Layout the content
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  // Design
+  background-color: #fff;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.label {
+  // Layout
+  flex-grow: 1; // Grow this box
+
+  // Text Layout
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  // Design
+  font-size: $font-size-large;
+  font-weight: bold;
+  color: #9D9D9D;
+}
+
+.newBtn, .actionMenuBtn {
+  // Layout
+  flex-grow: 0; // Don't grow
+  flex-basis: $icon-distance-size; // Adjust the location
+  text-align: center;
+}

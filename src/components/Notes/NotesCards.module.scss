@@ -1,0 +1,9 @@
+@import "../variablels_margin";
+
+.notesCards {
+  padding-top: $main-margin-top-and-bottom;
+  padding-bottom: $main-margin-top-and-bottom;
+
+  // Show a scroll bar as needed
+  overflow-y: auto;
+}
