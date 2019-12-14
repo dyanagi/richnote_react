@@ -1,6 +1,6 @@
 import React from 'react'
 import plusIconSvg from '../../../assets/images/plus_icon.svg'
-import ImageButtonBase from '../ImageButtonBase'
+import ImageButtonBase from '../base/ImageButtonBase'
 
 function NewIconButton () {
   return (

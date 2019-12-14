@@ -1,6 +1,6 @@
 import React from 'react'
 import actionMenuIconSvg from '../../../assets/images/action_menu_icon.svg'
-import ImageButtonBase from '../ImageButtonBase'
+import ImageButtonBase from '../base/ImageButtonBase'
 
 function ActionMenuIconButton () {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonBase from './ButtonBase'
+import ButtonBase from '../base/ButtonBase'
 
 function SaveButton () {
   return (
