@@ -1,0 +1,32 @@
+import React, { Component } from 'react'
+import cx from 'classnames'
+import styles from './SidebarIcon.module.scss'
+import * as PropTypes from 'prop-types'
+
+class SidebarIcon extends Component {
+  render () {
+    const { page, isSidebarActive, onClick } = this.props
+
+    const pageClassname = cx({
+      [styles.pageNotes]: page === 'pageNotes'
+    })
+
+    return (
+      <div
+        className={cx(styles.sidebarIcon, pageClassname,
+          { [styles.isActive]: isSidebarActive })}
+        onClick={onClick}
+      >
+        <span /><span /><span /><span />
+      </div>
+    )
+  }
+}
+
+export default SidebarIcon
+
+SidebarIcon.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  page: PropTypes.string.isRequired,
+  isSidebarActive: PropTypes.bool.isRequired
+}

@@ -1,0 +1,75 @@
+@import "responsiveness";
+@import "variablels_color";
+@import "variables_sidebar_icon";
+@import "variables_transition";
+@import "variablels_size";
+
+/*
+ Sidebar Icon
+*/
+
+.sidebarIcon {
+  z-index: 9; // to be in front of the sidebar.
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $sidebar-icon-line-width;
+  height: $sidebar-icon-height;
+  margin-top: $sidebar-icon-margin-top;
+  margin-left: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: 0; // 'top' is set for individual span (line)
+    height: $sidebar-icon-line-thickness;
+    width: 100%;
+    background-color: $link;
+    transform: rotate(0deg);
+
+    // Animation
+    transition: 0.3s;
+  }
+
+  span:nth-child(1) {
+    top: 0; // Top
+  }
+
+  span:nth-child(2), span:nth-child(3) {
+    top: $sidebar-icon-line-spacing; // Place both in the center overlaid.
+  }
+
+  span:nth-child(4) {
+    top: $sidebar-icon-line-spacing*2; // Bottom
+  }
+
+  &.isActive {
+    // Display by adding isActive class when Note is the current page
+    span:nth-child(1), span:nth-child(4) {
+      // Move to the center (for animation) and shrink to hide (with animation made by `transition`)
+      top: $sidebar-icon-line-spacing;
+      left: 50%;
+      width: 0;
+    }
+
+    span:nth-child(2) {
+      transform: rotate(45deg)
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg)
+    }
+  }
+
+  &.pageNotes {
+    display: none;
+    left: 0 - $sidebar-size;
+  }
+
+  @include desktop {
+    & {
+      display: none;
+    }
+  }
+}

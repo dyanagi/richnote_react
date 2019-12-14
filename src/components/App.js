@@ -7,10 +7,11 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import * as PropTypes from 'prop-types'
 import { changePage } from '../actions/pageActions'
+import SidebarIcon from './SidebarIcon'
 
 class App extends Component {
   state = {
-    sidebarActive: false
+    isSidebarActive: false
   }
 
   componentDidMount () {
@@ -25,12 +26,12 @@ class App extends Component {
 
   handleSidebarIconClick = () => {
     this.setState({
-      sidebarActive: !this.state.sidebarActive
+      isSidebarActive: !this.state.isSidebarActive
     })
   }
 
   render () {
-    const { sidebarActive } = this.state
+    const { isSidebarActive } = this.state
     const page = this.props.page
 
     const pageClassname = cx({
@@ -38,19 +39,9 @@ class App extends Component {
       [styles.pageNotes]: page === 'pageNotes'
     })
 
-    const sidebarIcon = (
-      <div
-        className={cx(styles.sidebarIcon, pageClassname,
-          { [styles.isActive]: sidebarActive })}
-        onClick={this.handleSidebarIconClick}
-      >
-        <span /><span /><span /><span />
-      </div>
-    )
-
     const sidebar = (
       <nav className={cx(styles.sidebarWrapper, pageClassname,
-        { [styles.isActive]: sidebarActive })}
+        { [styles.isActive]: isSidebarActive })}
       >
         <Sidebar />
       </nav>
@@ -72,7 +63,10 @@ class App extends Component {
 
     return (
       <div className='App'>
-        {sidebarIcon}
+        <SidebarIcon
+          page={page} isSidebarActive={isSidebarActive}
+          onClick={this.handleSidebarIconClick}
+        />
         {container}
       </div>
     )
