@@ -4,15 +4,16 @@ import styles from './Sidebar.module.scss'
 import SidebarNotebooks from './SidebarNotebooks'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 function Sidebar (props) {
-  const { notebooks } = props
+  const { notebooks, className } = props
   return (
-    <div className={styles.sidebar}>
+    <nav className={cx(styles.sidebar, className)}>
       <SidebarHeader />
       <p className={styles.allNotes}>All Notes</p>
       <SidebarNotebooks notebooks={notebooks} />
-    </div>
+    </nav>
   )
 }
 
@@ -25,5 +26,6 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps)(Sidebar)
 
 Sidebar.propTypes = {
+  className: PropTypes.string,
   notebooks: PropTypes.object.isRequired
 }

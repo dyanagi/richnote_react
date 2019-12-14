@@ -3,10 +3,14 @@
 @import "../variablels_size";
 
 .sidebar {
-  margin-left: $outer-margin-left-and-right;
 }
 
 .allNotes {
+  // White space
+  margin-left: $outer-margin-left-and-right;
+
+  // Design
   color: $link;
   font-size: $font-size-large;
 }
+

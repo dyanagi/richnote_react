@@ -1,7 +1,9 @@
+@import "../variablels_margin";
 @import "../variablels_color";
 
 .notebooks {
   margin-top: 16px;
+  margin-left: $outer-margin-left-and-right;
 }
 
 .notebook {

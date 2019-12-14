@@ -45,11 +45,9 @@ class App extends Component {
           onClick={this.handleSidebarIconClick}
         />
         <div className={styles.container}>
-          <nav className={cx(styles.sidebarWrapper, pageClassname,
+          <Sidebar className={cx(styles.sidebar, pageClassname,
             { [styles.isActive]: isSidebarActive })}
-          >
-            <Sidebar />
-          </nav>
+          />
           <Main className={styles.main} page={page} />
         </div>
       </>

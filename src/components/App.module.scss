@@ -5,9 +5,9 @@
 @import "variablels_size";
 
 /*
- Sidebar (Wrapper)
+ Sidebar
 */
-.sidebarWrapper {
+.sidebar {
   height: 100%;
   width: $sidebar-size;
   position: fixed;
@@ -52,7 +52,7 @@
   height: 100vh;
   max-height: 100vh;
 
-  .sidebarWrapper {
+  .sidebar {
     flex-grow: 0; // Don't grow
     flex-shrink: 0; // Don't shrink
   }
