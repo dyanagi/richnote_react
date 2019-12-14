@@ -10,7 +10,7 @@ Richnote is designed with Adobe XD.
 
 ### Videos
 
-Watch the demo on Youtube at <https://youtu.be/vL9yHQR1ddU>.
+Watch a demo video on Youtube at <https://youtu.be/vL9yHQR1ddU>.
 
 ### Screenshots
 
