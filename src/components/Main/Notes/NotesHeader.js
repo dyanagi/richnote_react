@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './NotesHeader.module.scss'
-import NewIconButton from '../../Common/icon_buttons/NewIconButton'
-import ActionMenuIconButton from '../../Common/icon_buttons/ActionMenuIconButton'
+import NewIconButton from '../../common/icon_buttons/NewIconButton'
+import ActionMenuIconButton from '../../common/icon_buttons/ActionMenuIconButton'
 
 function NotesHeader () {
   return (
