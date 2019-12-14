@@ -25,6 +25,7 @@
 .label {
   // Layout
   flex-grow: 1; // Grow this box
+  flex-shrink: 1; // Shrink
 
   // Text Layout
   white-space: nowrap;
@@ -40,6 +41,7 @@
 .newBtn, .actionMenuBtn {
   // Layout
   flex-grow: 0; // Don't grow
+  flex-shrink: 0; // Don't shrink
   flex-basis: $icon-distance-size; // Adjust the location
   text-align: center;
 }

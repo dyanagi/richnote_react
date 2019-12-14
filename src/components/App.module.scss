@@ -97,6 +97,11 @@ $sidebar-size: 280px;
   &.pageNote.isActive {
     // Display by adding isActive class when Note is the current page
     left: 0;
+
+    @include until($sidebar-size + 48px) {
+      // When the screen is very small, cover all screen
+      width: 100%;
+    }
   }
 
   @include desktop {

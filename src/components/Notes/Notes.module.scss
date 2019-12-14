@@ -13,6 +13,7 @@
     flex-shrink: 0; // Don't shrink
   }
 
+  // Cards
   & > *:nth-child(2) {
     flex-grow: 1; // Grow
     flex-shrink: 1; // Shrink
