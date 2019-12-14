@@ -5,7 +5,6 @@
 
   .noteHeader, .noteControlPanel {
     flex-grow: 0; // Don't grow
-    //flex-basis: 55px; probably not needed
     flex-shrink: 0; // Don't shrink
   }
 
