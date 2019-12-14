@@ -6,8 +6,8 @@ import NotesCards from './NotesCards'
 function Notes () {
   return (
     <div className={styles.notes}>
-      <NotesHeader />
-      <NotesCards />
+      <NotesHeader className={styles.notesHeader} />
+      <NotesCards className={styles.notesCards} />
     </div>
   )
 }
