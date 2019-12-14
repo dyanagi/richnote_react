@@ -4,24 +4,13 @@ import Sidebar from './Sidebar/Sidebar'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import * as PropTypes from 'prop-types'
-import { changePage } from '../actions/pageActions'
 import SidebarIcon from './SidebarIcon'
 import Main from './Main/Main'
-import { PAGE_NOTE, PAGE_NOTES } from '../constants/PageConstants'
+import { PAGE_NOTE } from '../constants/PageConstants'
 
 class App extends Component {
   state = {
     isSidebarActive: false
-  }
-
-  componentDidMount () {
-    setTimeout(() => {
-      this.props.changePage(PAGE_NOTES)
-    }, 3000)
-
-    setTimeout(() => {
-      this.props.changePage(PAGE_NOTE)
-    }, 4500)
   }
 
   handleSidebarIconClick = () => {
@@ -56,7 +45,6 @@ class App extends Component {
 }
 
 App.propTypes = {
-  changePage: PropTypes.func.isRequired,
   page: PropTypes.string.isRequired
 }
 
@@ -66,12 +54,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    changePage: (page) => {
-      dispatch(changePage(page))
-    }
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps)(App)
