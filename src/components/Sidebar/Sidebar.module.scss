@@ -1,4 +1,12 @@
-@import "../variables_sidebar_icon";
+@import "../variablels_margin";
+@import "../variablels_color";
+@import "../variablels_size";
 
-// Shift down the content.
-//padding-top: $sidebar-icon-content-push-to-bottom;
+.sidebar {
+  margin-left: $outer-margin-left-and-right;
+}
+
+.allNotes {
+  color: $link;
+  font-size: $font-size-large;
+}

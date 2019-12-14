@@ -1,21 +1,29 @@
 import React from 'react'
 import SidebarHeader from './SidebarHeader'
+import styles from './Sidebar.module.scss'
+import SidebarNotebooks from './SidebarNotebooks'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
-function Sidebar () {
+function Sidebar (props) {
+  const { notebooks } = props
   return (
-    <div className='Sidebar'>
+    <div className={styles.sidebar}>
       <SidebarHeader />
-      <div>
-        <p>All Notes</p>
-      </div>
-      <div>
-        <p>TODOs</p>
-        <p>Web Design</p>
-        <p>Programming Tips & Tricks</p>
-        <p>＋ Add a notebook</p>
-      </div>
+      <p className={styles.allNotes}>All Notes</p>
+      <SidebarNotebooks notebooks={notebooks} />
     </div>
   )
 }
 
-export default Sidebar
+const mapStateToProps = (state) => {
+  return {
+    notebooks: state.notebooks
+  }
+}
+
+export default connect(mapStateToProps)(Sidebar)
+
+Sidebar.propTypes = {
+  notebooks: PropTypes.object.isRequired
+}
