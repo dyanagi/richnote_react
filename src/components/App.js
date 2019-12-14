@@ -23,7 +23,7 @@ class App extends Component {
       this.setState({
         page: 'note'
       })
-    }, 4000)
+    }, 5000)
   }
 
   handleSidebarIconClick = () => {
@@ -34,10 +34,14 @@ class App extends Component {
 
   render () {
     const { sidebarActive, page } = this.state
+    const pageClassname = cx({
+      [styles.note]: page === 'note',
+      [styles.notes]: page === 'notes'
+    })
 
     const sidebarIcon = (
       <div
-        className={cx(styles.sidebarIcon,
+        className={cx(styles.sidebarIcon, pageClassname,
           { [styles.isActive]: sidebarActive })}
         onClick={this.handleSidebarIconClick}
       >
@@ -46,7 +50,7 @@ class App extends Component {
     )
 
     const sidebar = (
-      <nav className={cx(styles.sidebarWrapper,
+      <nav className={cx(styles.sidebarWrapper, pageClassname,
         { [styles.isActive]: sidebarActive })}
       >
         <Sidebar />
@@ -54,11 +58,7 @@ class App extends Component {
     )
 
     const main = (
-      <main className={cx(styles.mainFlexContainer, {
-        [styles.note]: page === 'note',
-        [styles.notes]: page === 'notes'
-      })}
-      >
+      <main className={cx(styles.mainFlexContainer, pageClassname)}>
         <Notes />
         <Note />
       </main>
