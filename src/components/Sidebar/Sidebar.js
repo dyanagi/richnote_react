@@ -27,5 +27,5 @@ export default connect(mapStateToProps)(Sidebar)
 
 Sidebar.propTypes = {
   className: PropTypes.string,
-  notebooks: PropTypes.object.isRequired
+  notebooks: PropTypes.array.isRequired
 }

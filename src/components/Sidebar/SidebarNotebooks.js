@@ -2,10 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './SidebarNotebooks.module.scss'
 
-SidebarNotebooks.propTypes = {
-  notebooks: PropTypes.object.isRequired
-}
-
 function SidebarNotebooks (props) {
   const { notebooks } = props
   const notebookList = notebooks.map((notebook) => {
@@ -18,6 +14,10 @@ function SidebarNotebooks (props) {
       {notebookList}
     </div>
   )
+}
+
+SidebarNotebooks.propTypes = {
+  notebooks: PropTypes.array.isRequired
 }
 
 export default SidebarNotebooks
