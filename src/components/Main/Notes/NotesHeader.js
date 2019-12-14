@@ -14,7 +14,7 @@ function NotesHeader () {
         <NewIconButton />
       </div>
 
-      <div className={styles.actionMenuBtn}>
+      <div className={styles.menuBtn}>
         <ActionMenuIconButton />
       </div>
     </div>
