@@ -1,11 +1,14 @@
 import React from 'react'
+import NoteHeaderMoveNotePanel from './NoteHeaderMoveNotePanel'
+import MenuIconButton from '../../common/icon_buttons/MenuIconButton'
 
-function NoteEditor () {
+function NoteHeader () {
   return (
     <div className='App'>
-      Tmp
+      <NoteHeaderMoveNotePanel />
+      <MenuIconButton />
     </div>
   )
 }
 
-export default NoteEditor
+export default NoteHeader

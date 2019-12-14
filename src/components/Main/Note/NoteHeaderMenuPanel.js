@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Delete, etc.
-function NoteActionMenu () {
+function NoteHeaderMenuPanel () {
   return (
     <div className='App'>
       <div>Delete</div>
@@ -9,4 +9,4 @@ function NoteActionMenu () {
   )
 }
 
-export default NoteActionMenu
+export default NoteHeaderMenuPanel
