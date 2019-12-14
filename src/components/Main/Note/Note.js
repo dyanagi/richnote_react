@@ -7,9 +7,9 @@ import NoteHeader from './NoteHeader'
 function Note () {
   return (
     <div className={styles.note}>
-      <NoteHeader />
-      <NoteEditor />
-      <NoteControlPanel />
+      <NoteHeader className={styles.noteHeader} />
+      <NoteEditor className={styles.noteEditor} />
+      <NoteControlPanel className={styles.noteControlPanel} />
     </div>
   )
 }

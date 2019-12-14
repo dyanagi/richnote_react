@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import 'draft-js/dist/Draft.css'
-import {
-  Editor,
-  EditorState,
-  RichUtils
-  // ,convertToRaw
-} from 'draft-js'
+import { Editor, EditorState, RichUtils, convertToRaw } from 'draft-js'
+import * as PropTypes from 'prop-types'
 
 class NoteEditor extends Component {
   constructor (props) {
@@ -28,10 +24,13 @@ class NoteEditor extends Component {
   }
 
   render () {
-    // const raw = convertToRaw(this.state.editorState.getCurrentContent())
+    const raw = convertToRaw(this.state.editorState.getCurrentContent())
+    console.log(JSON.stringify(raw))
+
+    const { className } = this.props
 
     return (
-      <div className='NoteEditor'>
+      <div className={className}>
         <button onClick={() => { this.handleBold() }}>Bold</button>
         <button onClick={() => { this.handleItalic() }}>Italic</button>
         <Editor
@@ -39,13 +38,13 @@ class NoteEditor extends Component {
           editorState={this.state.editorState}
           placeholder='This is the editor.'
         />
-
-        {/*<div>*/}
-        {/*  {JSON.stringify(raw)}*/}
-        {/*</div>*/}
       </div>
     )
   }
+}
+
+NoteEditor.propTypes = {
+  className: PropTypes.string
 }
 
 export default NoteEditor

@@ -3,15 +3,13 @@
   display: flex;
   flex-direction: column;
 
-  // Header
-  & > *:first-child {
+  .noteHeader, .noteControlPanel {
     flex-grow: 0; // Don't grow
     //flex-basis: 55px; probably not needed
     flex-shrink: 0; // Don't shrink
   }
 
-  // Cards
-  & > *:nth-child(2) {
+  .noteEditor {
     flex-grow: 1; // Grow
     flex-shrink: 1; // Shrink
   }
