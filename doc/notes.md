@@ -4,7 +4,6 @@
 
 ### eslint-config-standard-react
 
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/standard/standard)
 
 - <https://github.com/standard/eslint-config-standard-react>
 - <https://github.com/standard/standard>
@@ -45,6 +44,24 @@ npx standard --fix
 ## Modular CSS with React
 
 <https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e>
+
+## CSS for Slide/Swipe animation
+
+<https://css-tricks.com/simple-swipe-with-vanilla-javascript/>
+
+## Multiline Eclipse
+
+<https://css-tricks.com/line-clampin/>
+
+I'm using the WebKit Way
+
+```css
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+```
 
 ## CSS for Slide/Swipe animation
 
