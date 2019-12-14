@@ -1,4 +1,4 @@
-# Notes
+# Coding Notes
 
 ## Code Style
 
@@ -30,6 +30,10 @@ npx standard
 # Format code
 npx standard --fix
 ```
+
+## File extension
+
+Use `.js` extension (Not `.jsx)
 
 ## Draft.js
 
