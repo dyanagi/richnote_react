@@ -1,3 +1,22 @@
-// https://bulma.io/documentation/overview/responsiveness/
+// Import this file to use media-query mixins
 
-@import '../../node_modules/bulma/sass/utilities/all';
+// https://bulma.io/documentation/overview/responsiveness/
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../../node_modules/bulma/sass/utilities/derived-variables.sass";
+@import '../../node_modules/bulma/sass/utilities/mixins.sass';
+
+/*
+Examples:
+
+  @include mobile {
+    // For mobile screen (smaller than tablet)
+  }
+
+  @include tablet {
+    // For mobile screen (smaller than desktop)
+  }
+
+  @include desktop {
+    // For desktop or larger screen
+  }
+*/
