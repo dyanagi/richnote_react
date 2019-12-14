@@ -1,6 +1,6 @@
 import React from 'react'
-import plusIconSvg from '../../assets/images/plus_icon.svg'
-import ImageButtonBase from '../Common/ImageButtonBase'
+import plusIconSvg from '../../../assets/images/plus_icon.svg'
+import ImageButtonBase from '../../Common/ImageButtonBase'
 import styles from './NotesHeaderNewBtn.module.scss'
 
 function NotesHeaderNewBtn () {

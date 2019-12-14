@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
 import styles from './Main.module.scss'
-import Notes from '../Notes/Notes'
-import Note from '../Note/Note'
+import Notes from './Notes/Notes'
+import Note from './Note/Note'
 import * as PropTypes from 'prop-types'
 import { PAGE_NOTE, PAGE_NOTES } from '../../constants/PageConstants'
 
