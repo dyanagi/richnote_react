@@ -45,3 +45,8 @@ npx standard --fix
 ## Modular CSS with React
 
 <https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e>
+
+## CSS for Slide/Swipe animation
+
+<https://css-tricks.com/simple-swipe-with-vanilla-javascript/>
+

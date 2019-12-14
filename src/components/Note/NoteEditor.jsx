@@ -3,7 +3,8 @@ import 'draft-js/dist/Draft.css'
 import {
   Editor,
   EditorState,
-  RichUtils, convertToRaw
+  RichUtils
+  // ,convertToRaw
 } from 'draft-js'
 
 class NoteEditor extends Component {

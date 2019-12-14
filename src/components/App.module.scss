@@ -1,25 +1,21 @@
+@import "responsiveness";
 @import "variablels_color";
+@import "variables_sidebar_icon";
+@import "variables_transition";
 
-// (1) icon line length
-$sidebar-icon-line-width: 18px;
-// (2) icon line thickness
-$sidebar-icon-line-thickness: 1px;
-// (3) icon line spacing
-$sidebar-icon-line-spacing: 6px;
-
-// Calculate the height of the icon
-$sidebar-icon-height: $sidebar-icon-line-thickness * 3 + $sidebar-icon-line-spacing * 2;
-
-$sidebar-icon-margin: 16px;
-$sidebar-icon-content-push-to-bottom: $sidebar-icon-height + $sidebar-icon-margin * 2;
+/*
+ Sidebar Icon
+*/
 
 .sidebarIcon {
   z-index: 9; // to be in front of the sidebar.
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: $sidebar-icon-line-width;
   height: $sidebar-icon-height;
-  margin-top: $sidebar-icon-margin;
-  margin-left: $sidebar-icon-margin;
+  margin-top: $sidebar-icon-margin-top;
+  margin-left: 16px;
   transition: 0.3s;
   cursor: pointer;
 
@@ -40,7 +36,7 @@ $sidebar-icon-content-push-to-bottom: $sidebar-icon-height + $sidebar-icon-margi
   }
 
   span:nth-child(2), span:nth-child(3) {
-    top: $sidebar-icon-line-spacing; // Place both in the center overlaid
+    top: $sidebar-icon-line-spacing; // Place both in the center overlaid.
   }
 
   span:nth-child(4) {
@@ -63,30 +59,118 @@ $sidebar-icon-content-push-to-bottom: $sidebar-icon-height + $sidebar-icon-margi
       transform: rotate(-45deg)
     }
   }
+
+  @include desktop {
+    & {
+      display: none;
+    }
+  }
 }
 
-
+/*
+ Sidebar (Wrapper)
+*/
 .sidebarWrapper {
   height: 100%;
-  width: 240px;
+  width: 282px;
   position: fixed;
   z-index: 8; // to be front of the other objects.
   top: 0;
-  left: -260px;
+  left: -290px;
 
   // Animation
   overflow-x: hidden; // width is 0...so, hide the content.
-  transition: 245ms;
+  transition: $transition-duration;
 
   // Decoration
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
   background-color: white;
-
-  // Shift down the content
-  padding-top: $sidebar-icon-content-push-to-bottom;
 
   &.isActive {
     left: 0;
     width: 240px;
+  }
+
+  @include desktop {
+    position: relative;
+    left: 0;
+  }
+}
+
+/*
+  Side menu and main
+*/
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+
+  // Full screen
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+
+  .sidebarWrapper {
+    flex-grow: 0; // Don't grow
+    flex-shrink: 0; // Don't shrink
+  }
+
+  .mainFlexContainer{
+    flex-grow: 1; // Grow
+    flex-shrink: 1; // Shrink
+  }
+}
+
+/*
+  Main: Notes and Note
+*/
+body {
+  // Hide. Don't scroll by swiping in X-axis. (OK to scroll in Y-axis)
+  overflow-x: hidden;
+}
+
+// Apply to both mobile and tablet/desktop screens.
+.mainFlexContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  // Full screen
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+
+  & > div {
+    height: 100%;
+  }
+}
+
+// For a mobile screen, line up two boxes and switch between them by changing CSS class.
+@include mobile {
+  .mainFlexContainer {
+    transition: $transition-duration;
+
+    &.note {
+      transform: translate(0); // Show the box in the left
+    }
+
+    &.notes {
+      transform: translate(-100%); // Show the box in the right
+    }
+
+    & > div {
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+// For a tablet or bigger screen, display both two boxes.
+@include tablet {
+  .mainFlexContainer {
+    & > div {
+      min-width: 50%;
+      width: 50%;
+      height: 100%;
+    }
   }
 }
