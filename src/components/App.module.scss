@@ -63,7 +63,7 @@ $sidebar-size: 280px;
     }
   }
 
-  &.notes {
+  &.pageNotes {
     display: none;
     left: 0 - $sidebar-size;
   }
@@ -94,7 +94,7 @@ $sidebar-size: 280px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
   background-color: white;
 
-  &.note.isActive {
+  &.pageNote.isActive {
     // Display by adding isActive class when Note is the current page
     left: 0;
   }
@@ -158,11 +158,11 @@ body {
   .mainFlexContainer {
     transition: $transition-duration;
 
-    &.note {
+    &.pageNote {
       transform: translate(0); // Show the box in the left
     }
 
-    &.notes {
+    &.pageNotes {
       transform: translate(-100%); // Show the box in the right
     }
 

@@ -9,19 +9,19 @@ import cx from 'classnames'
 class App extends Component {
   state = {
     sidebarActive: false,
-    page: 'note'
+    page: 'pageNote'
   }
 
   componentDidMount () {
     setTimeout(() => {
       this.setState({
-        page: 'notes'
+        page: 'pageNotes'
       })
     }, 3000)
 
     setTimeout(() => {
       this.setState({
-        page: 'note'
+        page: 'pageNote'
       })
     }, 5000)
   }
@@ -35,8 +35,8 @@ class App extends Component {
   render () {
     const { sidebarActive, page } = this.state
     const pageClassname = cx({
-      [styles.note]: page === 'note',
-      [styles.notes]: page === 'notes'
+      [styles.pageNote]: page === 'pageNote',
+      [styles.pageNotes]: page === 'pageNotes'
     })
 
     const sidebarIcon = (
