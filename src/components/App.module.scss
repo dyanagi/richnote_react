@@ -43,7 +43,7 @@
   transition: $transition-duration;
 
   // Decoration
-  box-shadow: 3px 3px 6px $shadow-color;
+  box-shadow: 3px 0 6px $shadow-color;
   background-color: white;
 
   &.pageNote.isActive {
