@@ -1,3 +1,8 @@
+@charset "utf-8";
+
+@import '../node_modules/bulma/sass/utilities/all';
+@import '../node_modules/bulma/sass/base/all'; // Apply base styles globally (including mini-reset styles)
+@import '../node_modules/bulma/sass/elements/button'; // Use button styles
 @import "components/variablels_size";
 
 body {
@@ -6,9 +11,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: $font-size;
-  //overflow: hidden;
 }
 
+// Don't highlight the button when it's selected or clicked. (Remove the light blue outline of buttons on Chrome)
 button:focus {
   outline: none;
 }

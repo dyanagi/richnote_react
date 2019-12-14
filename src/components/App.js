@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './App.scss'
 import styles from './App.module.scss'
 import Sidebar from './Sidebar/Sidebar'
 import Note from './Note/Note'
