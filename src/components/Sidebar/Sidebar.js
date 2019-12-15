@@ -23,9 +23,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Sidebar)
-
 Sidebar.propTypes = {
   className: PropTypes.string,
   notebooks: PropTypes.array.isRequired
 }
+
+export default connect(mapStateToProps)(Sidebar)

@@ -11,7 +11,7 @@ function NoteControlPanel (props) {
   const { className } = props
 
   const handleSave = () => {
-    return props.changePage(PAGE_NOTE)
+    props.changePage(PAGE_NOTE)
   }
 
   return (

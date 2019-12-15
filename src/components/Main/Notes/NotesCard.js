@@ -33,8 +33,8 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(NotesCard)
-
 NotesCard.propTypes = {
   changePage: PropTypes.func
 }
+
+export default connect(null, mapDispatchToProps)(NotesCard)
