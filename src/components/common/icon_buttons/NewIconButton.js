@@ -1,12 +1,12 @@
 import React from 'react'
 import plusIconSvg from '../../../assets/images/plus_icon.svg'
-import ImageButtonBase from '../base/ImageButtonBase'
+import IconButtonBase from '../base/IconButtonBase'
 import * as PropTypes from 'prop-types'
 
 function NewIconButton (props) {
   const { className } = props
   return (
-    <ImageButtonBase className={className} src={plusIconSvg} alt='New' />
+    <IconButtonBase className={className} src={plusIconSvg} alt='New' />
   )
 }
 

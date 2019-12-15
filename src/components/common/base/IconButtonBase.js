@@ -2,8 +2,9 @@ import React from 'react'
 import * as PropTypes from 'prop-types'
 import styles from './IconButtonBase.module.scss'
 import cx from 'classnames'
+import ImageButtonBase from './ImageButtonBase'
 
-function ImageButtonBase (props) {
+function IconButtonBase (props) {
   const { className, src, alt } = props
   return (
     <ImageButtonBase
@@ -13,10 +14,10 @@ function ImageButtonBase (props) {
   )
 }
 
-ImageButtonBase.propTypes = {
+IconButtonBase.propTypes = {
   alt: PropTypes.string.isRequired,
   className: PropTypes.string,
   src: PropTypes.string.isRequired
 }
 
-export default ImageButtonBase
+export default IconButtonBase
