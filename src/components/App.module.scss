@@ -13,8 +13,9 @@
 
   // Full screen
   width: 100%;
-  height: 100vh;
+  height: 100vh; // Fallback
   max-height: 100vh;
+  height: calc(var(--app-container-vh, 1vh) * 100); // Set the global variable with JavaScript
 
   .sidebar {
     flex-grow: 0; // Don't grow

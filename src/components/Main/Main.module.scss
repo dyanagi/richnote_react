@@ -11,9 +11,7 @@
   align-items: center;
 
   // Full screen
-  width: 100%;
-  height: 100vh;
-  max-height: 100vh;
+  width: 100%; // Height is adjusted from the parent component (flex-grow: 1)
 
   & > div {
     height: 100%;

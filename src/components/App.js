@@ -13,6 +13,22 @@ class App extends Component {
     isSidebarActive: false
   }
 
+  // Adjust the height specifically for mobile device
+  // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+  resizeContainerHeight () {
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--app-container-vh', `${vh}px`)
+  }
+
+  componentDidMount () {
+    this.resizeContainerHeight()
+    window.addEventListener('resize', this.resizeContainerHeight)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.resizeContainerHeight)
+  }
+
   handleSidebarIconClick = () => {
     this.setState({
       isSidebarActive: !this.state.isSidebarActive

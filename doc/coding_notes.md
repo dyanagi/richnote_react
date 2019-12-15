@@ -71,3 +71,14 @@ I'm using the WebKit Way
 
 <https://css-tricks.com/simple-swipe-with-vanilla-javascript/>
 
+## Testing on mobile phones
+
+1. Install Android Studio
+2. Launch a emulator
+3. To access the host's local server, go to <http://10.0.2.2:3000> in the Android emulator
+
+## Full-screen height for mobile phones
+
+<https://css-tricks.com/the-trick-to-viewport-units-on-mobile/>
+
+I'm using this CSS Trick & JavaScript to show buttons at the bottom.
