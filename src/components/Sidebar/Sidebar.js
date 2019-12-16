@@ -6,8 +6,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-function Sidebar (props) {
-  const { notebooks, className } = props
+function Sidebar ({ notebooks, className }) {
   return (
     <nav className={cx(styles.sidebar, className)}>
       <SidebarHeader />

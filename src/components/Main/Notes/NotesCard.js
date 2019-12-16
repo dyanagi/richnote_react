@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './NotesCard.module.scss'
-import { changePage } from '../../../actions/pageActions'
+import { changePage } from '../../../store/actions/Actions'
 import { connect } from 'react-redux'
 import { PAGE_NOTES } from '../../../constants/PageConstants'
 import * as PropTypes from 'prop-types'
