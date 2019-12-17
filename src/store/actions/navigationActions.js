@@ -33,7 +33,6 @@ function setErrorMessage (dispatch, message) {
 }
 
 export function openNote (notebookId, noteId) {
-  console.log('openNote1')
   return (dispatch, getState) => {
     if (canOpenNote(getState())) {
       setNoteView(dispatch, notebookId, noteId)
