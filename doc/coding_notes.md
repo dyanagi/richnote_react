@@ -82,3 +82,7 @@ I'm using the WebKit Way
 <https://css-tricks.com/the-trick-to-viewport-units-on-mobile/>
 
 I'm using this CSS Trick & JavaScript to show buttons at the bottom.
+
+## Generating favicon/icon files from SVG
+
+See [Favicon Generation](favicon_generation/README.md)
