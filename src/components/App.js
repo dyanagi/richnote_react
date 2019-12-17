@@ -7,6 +7,9 @@ import * as PropTypes from 'prop-types'
 import SidebarIcon from './SidebarIcon'
 import Main from './Main/Main'
 import { PAGE_NOTE } from '../constants/PageConstants'
+import { initializeFontAwesome } from './FontAwesome'
+
+initializeFontAwesome()
 
 class App extends Component {
   state = {
