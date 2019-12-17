@@ -3,7 +3,7 @@ import SaveButton from '../../common/buttons/SaveButton'
 import CancelButton from '../../common/buttons/CancelButton'
 import * as PropTypes from 'prop-types'
 import Panel from '../../common/Panel'
-import { changePage } from '../../../store/actions/Actions'
+import { setPage } from '../../../store/actions/navigationActions'
 import { connect } from 'react-redux'
 import { PAGE_NOTE } from '../../../constants/PageConstants'
 
@@ -30,7 +30,7 @@ NoteControlPanel.propTypes = {
 const mapDispatchToProps = (dispatch) => {
   return {
     changePage: (page) => {
-      dispatch(changePage(page))
+      dispatch(setPage(page))
     }
   }
 }

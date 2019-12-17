@@ -1,4 +1,9 @@
-export const CHANGE_PAGE = 'CHANGE_PAGE'
-export const CREATE_NOTEBOOK = 'CREATE_NOTEBOOK'
-export const UPDATE_NOTEBOOK = 'UPDATE_NOTEBOOK'
+// Navigation
+export const SET_PAGE = 'SET_PAGE'
+export const SET_CURRENT_NOTEBOOK = 'SET_CURRENT_NOTEBOOK'
+export const SET_CURRENT_NOTE = 'SET_CURRENT_NOTE'
+
+// Notebook
+export const ADD_NOTEBOOK = 'ADD_NOTEBOOK'
+export const EDIT_NOTEBOOK = 'EDIT_NOTEBOOK'
 export const DELETE_NOTEBOOK = 'DELETE_NOTEBOOK'

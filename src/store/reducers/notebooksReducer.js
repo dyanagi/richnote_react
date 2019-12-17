@@ -1,7 +1,7 @@
 import {
-  CREATE_NOTEBOOK,
+  ADD_NOTEBOOK,
   DELETE_NOTEBOOK,
-  UPDATE_NOTEBOOK
+  EDIT_NOTEBOOK
 } from '../../constants/ActionTypes'
 
 const initState =
@@ -10,9 +10,9 @@ const initState =
       id: 0,
       name: 'TODOs',
       notes: [
-        { id: 0, title: 'Chores', content: '' },
-        { id: 1, title: 'UX Design', content: '' },
-        { id: 2, title: 'Front-End Development', content: '' }
+        { id: 0, title: 'Chores', content: 'Wash dishes, do vacuum, sleep more' },
+        { id: 1, title: 'UX Design', content: 'Get a review' },
+        { id: 2, title: 'Front-End Development', content: 'Create a first React app.' }
       ]
     },
     {
@@ -37,7 +37,7 @@ const initState =
 
 const notebooksReducer = (state = initState, action) => {
   switch (action.type) {
-    case CREATE_NOTEBOOK:
+    case ADD_NOTEBOOK:
       return [
         ...state, {
           id: state.reduce((maxId, notebook) => Math.max(notebook.id, maxId),
@@ -46,7 +46,7 @@ const notebooksReducer = (state = initState, action) => {
           notes: []
         }]
 
-    case UPDATE_NOTEBOOK:
+    case EDIT_NOTEBOOK:
       return state.map(notebook => notebook.id === action.id ? {
         ...notebook,
         title: action.title

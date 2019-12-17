@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import pageReducer from './pageReducer'
+import navigationReducer from './navigationReducer'
 import notebooksReducer from './notebooksReducer'
 
 const rootReducer = combineReducers({
-  page: pageReducer,
+  navigation: navigationReducer,
   notebooks: notebooksReducer
 })
 

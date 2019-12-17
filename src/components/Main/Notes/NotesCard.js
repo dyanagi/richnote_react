@@ -1,40 +1,24 @@
 import React from 'react'
 import styles from './NotesCard.module.scss'
-import { changePage } from '../../../store/actions/Actions'
-import { connect } from 'react-redux'
-import { PAGE_NOTES } from '../../../constants/PageConstants'
 import * as PropTypes from 'prop-types'
 
-function NotesCard (props) {
-  const handleClick = () => {
-    props.changePage(PAGE_NOTES)
-  }
-
+function NotesCard ({ notebookId, note, onClick }) {
   return (
-    <div className={styles.notesCard} onClick={handleClick}>
+    <div className={styles.notesCard} onClick={onClick}>
       <p className={styles.title}>
-        Grocery List Grocery List Grocery List Grocery List
+        {note.title}
       </p>
       <p className={styles.previewText}>
-        Preview text Preview text Preview text Preview text Preview text Preview
-        text Preview text Preview text Preview text Preview text Preview text
-        Preview text Preview text Preview text Preview
-        text Preview text Preview text Preview text
+        {note.content}
       </p>
     </div>
   )
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    changePage: (page) => {
-      dispatch(changePage(page))
-    }
-  }
-}
-
 NotesCard.propTypes = {
-  changePage: PropTypes.func
+  note: PropTypes.object.isRequired,
+  notebookId: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
-export default connect(null, mapDispatchToProps)(NotesCard)
+export default NotesCard

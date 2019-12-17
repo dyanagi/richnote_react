@@ -66,7 +66,7 @@ App.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    page: state.page
+    page: state.navigation.currentPage
   }
 }
 
