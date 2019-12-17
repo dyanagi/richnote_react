@@ -10,7 +10,7 @@ function Sidebar ({ notebooks, className }) {
   return (
     <nav className={cx(styles.sidebar, className)}>
       <SidebarHeader />
-      <p className={styles.allNotes}>All Notes</p>
+      {/* <p className={styles.allNotes}>All Notes</p> */}
       <SidebarNotebooks notebooks={notebooks} />
     </nav>
   )
