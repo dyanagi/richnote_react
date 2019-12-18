@@ -2,7 +2,7 @@
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/standard/standard)
 
-![Icon](src/assets/images/notebook_icon.svg) Richnote is a note-taking app with rich editor built with React/Redux.
+![Icon](src/assets/images/richnote_icon.svg) Richnote is a note-taking app with rich editor built with React/Redux.
 
 ## Design Prototype
 
