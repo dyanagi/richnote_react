@@ -81,8 +81,13 @@ I'm using the WebKit Way
 
 <https://css-tricks.com/the-trick-to-viewport-units-on-mobile/>
 
-I'm using this CSS Trick & JavaScript to show buttons at the bottom.
+In this project, this CSS/JavaScript trick is used to place an object at the bottom. (Without it, objects at the bottom will be overflow for the height of the top status bar)
 
 ## Generating favicon/icon files from SVG
 
 See [Favicon Generation](favicon_generation/README.md)
+
+## React.js
+
+[Default README](default_readme.md)
+
