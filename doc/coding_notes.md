@@ -85,7 +85,7 @@ In this project, this CSS/JavaScript trick is used to place an object at the bot
 
 ## Generating favicon/icon files from SVG
 
-See [Favicon Generation](favicon_generation/README.md)
+See [Favicon Generation](favicon_generation/favicon_generation.md)
 
 ## React.js
 
