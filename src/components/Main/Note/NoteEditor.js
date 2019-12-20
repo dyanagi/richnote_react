@@ -1,41 +1,26 @@
 import React, { Component } from 'react'
 import 'draft-js/dist/Draft.css'
-import { Editor, EditorState, RichUtils, convertToRaw } from 'draft-js'
+import { Editor, convertToRaw } from 'draft-js'
 import * as PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { editEditorState } from '../../../store/actions/editorActions'
 
 class NoteEditor extends Component {
-  constructor (props) {
-    super(props)
-    this.state = { editorState: EditorState.createEmpty() }
-  }
-
   handleChange (editorState) {
-    this.setState({ editorState })
-  }
-
-  handleBold () {
-    this.handleChange(
-      RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'))
-  }
-
-  handleItalic () {
-    this.handleChange(
-      RichUtils.toggleInlineStyle(this.state.editorState, 'ITALIC'))
+    editEditorState(editorState)
   }
 
   render () {
-    const raw = convertToRaw(this.state.editorState.getCurrentContent())
-    console.log(JSON.stringify(raw))
+    const { className, editorState, onChangeEditorState } = this.props
 
-    const { className } = this.props
+    const raw = convertToRaw(editorState.getCurrentContent())
+    console.log(JSON.stringify(raw))
 
     return (
       <div className={className}>
-        <button onClick={() => { this.handleBold() }}>Bold</button>
-        <button onClick={() => { this.handleItalic() }}>Italic</button>
         <Editor
-          onChange={(editorState) => { this.handleChange(editorState) }}
-          editorState={this.state.editorState}
+          editorState={editorState}
+          onChange={onChangeEditorState}
           placeholder='This is the editor.'
         />
       </div>
@@ -44,7 +29,23 @@ class NoteEditor extends Component {
 }
 
 NoteEditor.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  editorState: PropTypes.object.isRequired,
+  onChangeEditorState: PropTypes.func.isRequired
 }
 
-export default NoteEditor
+const mapStateToProps = (state) => {
+  return {
+    editorState: state.editor.editorState
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onChangeEditorState: (editorState) => {
+      dispatch(editEditorState(editorState))
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(NoteEditor)
