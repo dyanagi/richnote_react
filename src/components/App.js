@@ -8,6 +8,7 @@ import SidebarIcon from './SidebarIcon'
 import Main from './Main/Main'
 import { PAGE_NOTE } from '../constants/PageConstants'
 import { initializeFontAwesome } from './FontAwesome'
+import Overlay from './Overlay'
 
 initializeFontAwesome()
 
@@ -48,6 +49,7 @@ class App extends Component {
 
     return (
       <>
+        <Overlay onClick={this.handleSidebarIconClick} page={page} isOverlayActive={isSidebarActive} />
         <SidebarIcon
           page={page} isSidebarActive={isSidebarActive}
           onClick={this.handleSidebarIconClick}
