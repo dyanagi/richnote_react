@@ -6,7 +6,7 @@ import { PAGE_NOTES } from '../constants/PageConstants'
 
 class SidebarIcon extends Component {
   render () {
-    const { page, isSidebarActive, onClick } = this.props
+    const { page, isActive, onClick } = this.props
 
     const pageClassname = cx({
       [styles.pageNotes]: page === PAGE_NOTES
@@ -15,7 +15,7 @@ class SidebarIcon extends Component {
     return (
       <div
         className={cx(styles.sidebarIcon, pageClassname,
-          { [styles.isActive]: isSidebarActive })}
+          { [styles.isActive]: isActive })}
         onClick={onClick}
       >
         <span /><span /><span /><span />
@@ -29,5 +29,5 @@ export default SidebarIcon
 SidebarIcon.propTypes = {
   onClick: PropTypes.func.isRequired,
   page: PropTypes.string.isRequired,
-  isSidebarActive: PropTypes.bool.isRequired
+  isActive: PropTypes.bool.isRequired
 }

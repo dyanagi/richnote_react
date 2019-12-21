@@ -5,12 +5,12 @@ import * as PropTypes from 'prop-types'
 
 class Overlay extends Component {
   render () {
-    const { isOverlayActive, onClick } = this.props
+    const { isActive, onClick } = this.props
 
     return (
       <div
         className={cx(styles.overlay,
-          { [styles.isActive]: isOverlayActive })}
+          { [styles.isActive]: isActive })}
         onClick={onClick}
       />
     )
@@ -21,5 +21,5 @@ export default Overlay
 
 Overlay.propTypes = {
   onClick: PropTypes.func.isRequired,
-  isOverlayActive: PropTypes.bool.isRequired
+  isActive: PropTypes.bool.isRequired
 }

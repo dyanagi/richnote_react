@@ -49,9 +49,9 @@ class App extends Component {
 
     return (
       <>
-        <Overlay onClick={this.handleSidebarIconClick} page={page} isOverlayActive={isSidebarActive} />
+        <Overlay onClick={this.handleSidebarIconClick} page={page} isActive={isSidebarActive} />
         <SidebarIcon
-          page={page} isSidebarActive={isSidebarActive}
+          page={page} isActive={isSidebarActive}
           onClick={this.handleSidebarIconClick}
         />
         <div className={styles.container}>

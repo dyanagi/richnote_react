@@ -3,6 +3,7 @@
 @import "variables_sidebar_icon";
 @import "variables_transition";
 @import "variablels_size";
+@import "variablels_z_index";
 
 /*
   Side menu and main
@@ -35,7 +36,7 @@
   height: 100%;
   width: $sidebar-size;
   position: fixed;
-  z-index: 8; // to be front of the other objects.
+  z-index: $z-index-sidebar;
   top: 0;
   left: -9 - $sidebar-size;
 

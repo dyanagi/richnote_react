@@ -3,12 +3,13 @@
 @import "variables_sidebar_icon";
 @import "variables_transition";
 @import "variablels_size";
+@import "variablels_z_index";
 
 /*
  Sidebar Icon
 */
 .sidebarIcon {
-  z-index: 9; // to be in front of the sidebar.
+  z-index: $z-index-sidebar-icon;
   position: absolute;
   top: 0;
   left: 0;
