@@ -13,10 +13,14 @@ Examples:
   }
 
   @include tablet {
-    // For mobile screen (smaller than desktop)
+    // For tablet screen or wider (tablet or desktop)
+  }
+
+  @include touch {
+    // For mobile and tablet screen (smaller than desktop)
   }
 
   @include desktop {
-    // For desktop or larger screen
+    // For desktop or wider screen
   }
 */
