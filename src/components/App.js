@@ -49,14 +49,21 @@ class App extends Component {
 
     return (
       <>
-        <Overlay onClick={this.handleSidebarIconClick} page={page} isActive={isSidebarActive} />
+        <Overlay
+          onClick={this.handleSidebarIconClick}
+          page={page}
+          isActive={isSidebarActive}
+        />
         <SidebarIcon
-          page={page} isActive={isSidebarActive}
+          page={page}
+          isActive={isSidebarActive}
           onClick={this.handleSidebarIconClick}
         />
         <div className={styles.container}>
-          <Sidebar className={cx(styles.sidebar, pageClassname,
-            { [styles.isActive]: isSidebarActive })}
+          <Sidebar
+            className={cx(styles.sidebar, pageClassname, {
+              [styles.isActive]: isSidebarActive
+            })}
           />
           <Main className={styles.main} page={page} />
         </div>
@@ -69,7 +76,7 @@ App.propTypes = {
   page: PropTypes.string.isRequired
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     page: state.navigation.currentPage
   }

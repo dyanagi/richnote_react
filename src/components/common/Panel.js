@@ -5,11 +5,7 @@ import cx from 'classnames'
 
 // Panel shows up at the bottom which contains buttons to select the next action.
 function Panel ({ className, children }) {
-  return (
-    <div className={cx(styles.panel, className)}>
-      {children}
-    </div>
-  )
+  return <div className={cx(styles.panel, className)}>{children}</div>
 }
 
 Panel.propTypes = {

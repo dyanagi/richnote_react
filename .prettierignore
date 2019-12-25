@@ -1,0 +1,10 @@
+/build
+/node_modules
+/public/index.html
+src/serviceWorker.js
+
+# Having an issue in this file near a object inside a conditional operator where deeply nested
+# References:
+#   https://github.com/prettier/prettier/issues/5184
+#   https://github.com/sheerun/prettier-standard/issues/76
+#src/store/reducers/notebooksReducer.js

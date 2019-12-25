@@ -9,8 +9,7 @@ class Overlay extends Component {
 
     return (
       <div
-        className={cx(styles.overlay,
-          { [styles.isActive]: isActive })}
+        className={cx(styles.overlay, { [styles.isActive]: isActive })}
         onClick={onClick}
       />
     )

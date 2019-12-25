@@ -5,10 +5,8 @@ import styles from './ButtonBase.module.scss'
 
 function ButtonBase ({ className, label, onClick }) {
   return (
-    <button
-      className={cx(styles.buttonBase, className)}
-      onClick={onClick}
-    >{label}
+    <button className={cx(styles.buttonBase, className)} onClick={onClick}>
+      {label}
     </button>
   )
 }

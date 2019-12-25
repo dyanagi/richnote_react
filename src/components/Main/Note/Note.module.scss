@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
 
-  .noteHeader, .noteControlPanel {
+  .noteHeader,
+  .noteControlPanel {
     flex-grow: 0; // Don't grow
     flex-shrink: 0; // Don't shrink
   }

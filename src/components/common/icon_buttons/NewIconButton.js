@@ -5,9 +5,7 @@ import * as PropTypes from 'prop-types'
 
 function NewIconButton (props) {
   const { className } = props
-  return (
-    <IconButtonBase className={className} src={plusIconSvg} alt='New' />
-  )
+  return <IconButtonBase className={className} src={plusIconSvg} alt='New' />
 }
 
 export default NewIconButton

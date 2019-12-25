@@ -1,11 +1,17 @@
 {
   "ignorePatterns": [
-    "src/serviceWorker.js",
-    "src/setupTests.js"
+    "src/serviceWorker.js"
   ],
   "parser": "babel-eslint",
   "extends": [
     "standard",
     "standard-react"
-  ]
+  ],
+  "rules": {
+    // Run Prettier on save to fix indentation. Prettier is doing right.
+    // References:
+    //   https://github.com/prettier/prettier/issues/815
+    //   https://github.com/eslint/eslint/issues/12674
+    "indent": "off"
+  }
 }

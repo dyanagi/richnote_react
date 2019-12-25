@@ -1,6 +1,4 @@
-import {
-  EDIT_EDITOR_STATE
-} from '../../constants/ActionTypes'
+import { EDIT_EDITOR_STATE } from '../../constants/ActionTypes'
 import { EditorState } from 'draft-js'
 
 const initState = {

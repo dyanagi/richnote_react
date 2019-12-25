@@ -5,12 +5,8 @@ import * as PropTypes from 'prop-types'
 function NotesCard ({ notebookId, note, onClick }) {
   return (
     <div className={styles.notesCard} onClick={onClick}>
-      <p className={styles.title}>
-        {note.title}
-      </p>
-      <p className={styles.previewText}>
-        {note.content}
-      </p>
+      <p className={styles.title}>{note.title}</p>
+      <p className={styles.previewText}>{note.content}</p>
     </div>
   )
 }

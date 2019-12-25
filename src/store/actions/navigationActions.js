@@ -6,9 +6,9 @@ import {
 } from '../../constants/ActionTypes'
 
 // For Mobile Screen
-export const setPage = (page) => ({ type: SET_PAGE, page: page })
+export const setPage = page => ({ type: SET_PAGE, page: page })
 
-export const setCurrentNotebook = (notebookId) => ({
+export const setCurrentNotebook = notebookId => ({
   type: SET_CURRENT_NOTEBOOK,
   notebookId
 })

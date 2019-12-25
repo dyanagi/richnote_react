@@ -1,9 +1,9 @@
-@import "responsiveness";
-@import "variablels_color";
-@import "variables_sidebar_icon";
-@import "variables_transition";
-@import "variablels_size";
-@import "variablels_z_index";
+@import 'responsiveness';
+@import 'variablels_color';
+@import 'variables_sidebar_icon';
+@import 'variables_transition';
+@import 'variablels_size';
+@import 'variablels_z_index';
 
 /*
  Sidebar Icon
@@ -36,17 +36,19 @@
     top: 0; // Top
   }
 
-  span:nth-child(2), span:nth-child(3) {
+  span:nth-child(2),
+  span:nth-child(3) {
     top: $sidebar-icon-line-spacing; // Place both in the center overlaid.
   }
 
   span:nth-child(4) {
-    top: $sidebar-icon-line-spacing*2; // Bottom
+    top: $sidebar-icon-line-spacing * 2; // Bottom
   }
 
   &.isActive {
     // Display by adding isActive class when Note is the current page
-    span:nth-child(1), span:nth-child(4) {
+    span:nth-child(1),
+    span:nth-child(4) {
       // Move to the center (for animation) and shrink to hide (with animation made by `transition`)
       top: $sidebar-icon-line-spacing;
       left: 50%;
@@ -54,11 +56,11 @@
     }
 
     span:nth-child(2) {
-      transform: rotate(45deg)
+      transform: rotate(45deg);
     }
 
     span:nth-child(3) {
-      transform: rotate(-45deg)
+      transform: rotate(-45deg);
     }
   }
 

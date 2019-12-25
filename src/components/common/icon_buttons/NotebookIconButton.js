@@ -7,7 +7,8 @@ function NotebookIconButton (props) {
   const { className } = props
   return (
     <IconButtonBase
-      className={className} src={notebookIconSvg}
+      className={className}
+      src={notebookIconSvg}
       alt='Notebook'
     />
   )

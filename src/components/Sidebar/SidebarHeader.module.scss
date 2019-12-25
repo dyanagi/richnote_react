@@ -1,7 +1,7 @@
-@import "../variablels_margin";
-@import "../variablels_color";
-@import "../variablels_size";
-@import "../variables_sidebar_icon";
+@import '../variablels_margin';
+@import '../variablels_color';
+@import '../variablels_size';
+@import '../variables_sidebar_icon';
 
 .sidebarHeader {
   // Size
@@ -18,7 +18,8 @@
   justify-content: flex-end; // Push buttons to the right
 }
 
-.newBtn, .menuBtn {
+.newBtn,
+.menuBtn {
   // Layout
   flex-grow: 0; // Don't grow
   flex-shrink: 0; // Don't shrink

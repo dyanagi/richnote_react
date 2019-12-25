@@ -10,16 +10,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { RichUtils } from 'draft-js'
 import { editEditorState } from '../../../store/actions/editorActions'
 
-function NoteControlPanel ({ className, editorState, editEditorState, changePage }) {
+function NoteControlPanel ({
+  className,
+  editorState,
+  editEditorState,
+  changePage
+}) {
   const handleSave = () => {
     changePage(PAGE_NOTE)
   }
 
-  const handleChange = (editorState) => {
+  const handleChange = editorState => {
     editEditorState(editorState)
   }
 
-  const handleStyleButtonClick = (style) => {
+  const handleStyleButtonClick = style => {
     handleChange(RichUtils.toggleInlineStyle(editorState, style))
   }
 
@@ -29,19 +34,27 @@ function NoteControlPanel ({ className, editorState, editEditorState, changePage
       <SaveButton onClick={handleSave} />
       <FontAwesomeIcon
         icon='bold'
-        onClick={() => { handleStyleButtonClick('BOLD') }}
+        onClick={() => {
+          handleStyleButtonClick('BOLD')
+        }}
       />
       <FontAwesomeIcon
         icon='italic'
-        onClick={() => { handleStyleButtonClick('ITALIC') }}
+        onClick={() => {
+          handleStyleButtonClick('ITALIC')
+        }}
       />
       <FontAwesomeIcon
         icon='underline'
-        onClick={() => { handleStyleButtonClick('UNDERLINE') }}
+        onClick={() => {
+          handleStyleButtonClick('UNDERLINE')
+        }}
       />
       <FontAwesomeIcon
         icon='heading'
-        onClick={() => { handleStyleButtonClick('header-three') }}
+        onClick={() => {
+          handleStyleButtonClick('header-three')
+        }}
       />
     </Panel>
   )
@@ -54,18 +67,18 @@ NoteControlPanel.propTypes = {
   editorState: PropTypes.object.isRequired
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     editorState: state.editor.editorState
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    editEditorState: (editorState) => {
+    editEditorState: editorState => {
       dispatch(editEditorState(editorState))
     },
-    changePage: (page) => {
+    changePage: page => {
       dispatch(setPage(page))
     }
   }

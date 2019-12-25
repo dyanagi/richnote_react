@@ -34,18 +34,18 @@ NoteEditor.propTypes = {
   onChangeEditorState: PropTypes.func.isRequired
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     editorState: state.editor.editorState
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    onChangeEditorState: (editorState) => {
+    onChangeEditorState: editorState => {
       dispatch(editEditorState(editorState))
     }
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(NoteEditor)
+export default connect(mapStateToProps, mapDispatchToProps)(NoteEditor)

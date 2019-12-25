@@ -5,13 +5,10 @@ import MenuIconButton from '../../common/icon_buttons/MenuIconButton'
 import cx from 'classnames'
 import * as PropTypes from 'prop-types'
 
-function NotesHeader (props) {
-  const { className } = props
+function NotesHeader ({ className, title }) {
   return (
     <div className={cx(styles.noteHeader, className)}>
-      <p className={styles.label}>
-        All Notes Test Test Test
-      </p>
+      <p className={styles.label}>{title}</p>
 
       <div className={styles.newBtn}>
         <NewIconButton />
@@ -25,7 +22,8 @@ function NotesHeader (props) {
 }
 
 NotesHeader.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
+  title: PropTypes.string
 }
 
 export default NotesHeader

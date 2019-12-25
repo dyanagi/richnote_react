@@ -11,12 +11,16 @@ class Notes extends Component {
   }
 
   notebook = this.props.notebooks.find(
-    notebook => notebook.id === this.state.notebook_id)
+    notebook => notebook.id === this.state.notebook_id
+  )
 
   render () {
     return (
       <div className={styles.notes}>
-        <NotesHeader className={styles.notesHeader} />
+        <NotesHeader
+          className={styles.notesHeader}
+          title={this.notebook.name}
+        />
         <NotesCards
           className={styles.notesCards}
           notebookId={this.notebook.id}
@@ -31,7 +35,7 @@ Notes.propTypes = {
   notebooks: PropTypes.array.isRequired
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     notebooks: state.notebooks
   }

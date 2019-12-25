@@ -8,7 +8,8 @@ function IconButtonBase (props) {
   const { className, src, alt } = props
   return (
     <ImageButtonBase
-      className={cx(styles.iconButtonBase, className)} src={src}
+      className={cx(styles.iconButtonBase, className)}
+      src={src}
       alt={alt}
     />
   )

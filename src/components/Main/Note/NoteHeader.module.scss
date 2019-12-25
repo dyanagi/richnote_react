@@ -1,6 +1,6 @@
-@import "../../variablels_margin";
-@import "../../variablels_color";
-@import "../../variablels_size";
+@import '../../variablels_margin';
+@import '../../variablels_color';
+@import '../../variablels_size';
 
 .noteHeader {
   // Size
@@ -20,7 +20,6 @@
   // Design
   background-color: #fff;
   box-shadow: 0 3px 6px $shadow-color;
-
 
   .noteHeaderMoveNoteButton {
     // Layout

@@ -6,10 +6,7 @@ import * as PropTypes from 'prop-types'
 function MenuIconButton (props) {
   const { className } = props
   return (
-    <IconButtonBase
-      className={className} src={actionMenuIconSvg}
-      alt='Menu'
-    />
+    <IconButtonBase className={className} src={actionMenuIconSvg} alt='Menu' />
   )
 }
 

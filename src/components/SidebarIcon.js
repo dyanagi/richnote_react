@@ -14,11 +14,15 @@ class SidebarIcon extends Component {
 
     return (
       <div
-        className={cx(styles.sidebarIcon, pageClassname,
-          { [styles.isActive]: isActive })}
+        className={cx(styles.sidebarIcon, pageClassname, {
+          [styles.isActive]: isActive
+        })}
         onClick={onClick}
       >
-        <span /><span /><span /><span />
+        <span />
+        <span />
+        <span />
+        <span />
       </div>
     )
   }

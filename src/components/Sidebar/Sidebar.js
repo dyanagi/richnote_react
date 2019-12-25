@@ -16,7 +16,7 @@ function Sidebar ({ notebooks, className }) {
   )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     notebooks: state.notebooks
   }

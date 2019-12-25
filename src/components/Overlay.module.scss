@@ -1,4 +1,4 @@
-@import "variablels_z_index";
+@import 'variablels_z_index';
 
 .overlay {
   z-index: $z-index-overlay;
@@ -8,7 +8,7 @@
   width: 100%;
   height: 100%;
 
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;

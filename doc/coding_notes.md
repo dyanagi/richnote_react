@@ -2,8 +2,7 @@
 
 ## Code Style
 
-### eslint-config-standard-react
-
+### eslint-config-standard-react (JavaScript Standard Style)
 
 - <https://github.com/standard/eslint-config-standard-react>
 - <https://github.com/standard/standard>
@@ -30,6 +29,15 @@ npx standard
 # Format code
 npx standard --fix
 ```
+
+### Prettier Standard
+
+```bash
+# Run on all files and check with ESLint
+prettier-standard --lint
+```
+
+Reformat on each file on save in IntelliJ-based IDEs: Add a File Watcher plugin, add Prettier in File Watcher, set `$ProjectFileDir$/node_modules/.bin/prettier-standard` in the Program field.
 
 ## File extension
 
@@ -63,7 +71,7 @@ I'm using the WebKit Way
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
 }
 ```
 
@@ -90,4 +98,3 @@ See [Favicon Generation](favicon_generation/favicon_generation.md)
 ## React.js
 
 [Default README](default_readme.md)
-

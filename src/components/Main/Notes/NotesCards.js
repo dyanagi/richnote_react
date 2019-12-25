@@ -18,27 +18,23 @@ class NotesCards extends Component {
       const noteList = notes.map(note => {
         return (
           <NotesCard
-            key={note.id} notebookId={notebookId} note={note}
-            onClick={() => { this.handleClick(notebookId, note.id) }}
+            key={note.id}
+            notebookId={notebookId}
+            note={note}
+            onClick={() => {
+              this.handleClick(notebookId, note.id)
+            }}
           />
         )
       })
-      return (
-        <div className={cx(styles.notesCards, className)}>
-          {noteList}
-        </div>
-      )
+      return <div className={cx(styles.notesCards, className)}>{noteList}</div>
     } else {
-      return (
-        <div className={cx(styles.notesCards, className)}>
-          test
-        </div>
-      )
+      return <div className={cx(styles.notesCards, className)}>test</div>
     }
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     openNote: (notebookId, noteId) => dispatch(openNote(notebookId, noteId))
   }
