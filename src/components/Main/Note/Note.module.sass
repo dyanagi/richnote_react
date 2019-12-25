@@ -1,0 +1,16 @@
+.note
+  // Layout
+  display: flex
+  flex-direction: column
+
+  .noteHeader, .noteControlPanel
+    // Don't grow
+    flex-grow: 0
+    // Don't shrink
+    flex-shrink: 0
+
+  .noteEditor
+    // Grow
+    flex-grow: 1
+    // Shrink
+    flex-shrink: 1

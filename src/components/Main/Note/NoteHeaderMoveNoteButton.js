@@ -1,7 +1,7 @@
 import React from 'react'
 import NotebookIconButton from '../../common/icon_buttons/NotebookIconButton'
 import * as PropTypes from 'prop-types'
-import styles from './NoteHeaderMoveNoteButton.module.scss'
+import styles from './NoteHeaderMoveNoteButton.module.sass'
 import cx from 'classnames'
 
 // The 'Move Note to...' menu.

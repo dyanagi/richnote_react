@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './NotesCard.module.scss'
+import styles from './NotesCard.module.sass'
 import * as PropTypes from 'prop-types'
 
 function NotesCard ({ notebookId, note, onClick }) {

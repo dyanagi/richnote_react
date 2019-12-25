@@ -1,0 +1,42 @@
+@import ../responsiveness
+@import ../variables_transition
+
+// Main: Notes and Note
+
+// Apply to both mobile and tablet/desktop screens.
+.main
+  display: flex
+  flex-wrap: nowrap
+  align-items: center
+
+  // Full screen
+  // Height is adjusted from the parent component (flex-grow: 1)
+  width: 100%
+
+  & > div
+    height: 100%
+
+// For a mobile screen, line up two boxes and switch between them by changing CSS class.
++mobile
+  .main
+    transition: $transition-duration
+
+    // Show the box in the left
+    &.pageNote
+      transform: translate(0)
+
+    // Show the box in the right
+    &.pageNotes
+      transform: translate(-100%)
+
+    & > div
+      min-width: 100%
+      width: 100%
+
+// For a tablet or bigger screen, display both two boxes.
++tablet
+  .main
+    & > div
+      min-width: 50%
+      width: 50%
+      height: 100%

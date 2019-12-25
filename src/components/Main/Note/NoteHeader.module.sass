@@ -1,0 +1,39 @@
+@import ../../variablels_margin
+@import ../../variablels_color
+@import ../../variablels_size
+
+.noteHeader
+  // Size
+  width: 100%
+  height: $header-height
+
+  // White space
+  padding-left: $outer-margin-left-and-right
+  padding-right: $outer-margin-left-and-right / 4
+  // Push down the content to make space for the shadow
+  margin-bottom: 3px
+
+  // Layout the content
+  display: flex
+  align-items: center
+  flex-wrap: nowrap
+
+  // Design
+  background-color: #fff
+  box-shadow: 0 3px 6px $shadow-color
+
+  .noteHeaderMoveNoteButton
+    // Grow this box
+    flex-grow: 1
+    // Shrink
+    flex-shrink: 1
+
+  .menuIconButton
+    // Don't grow
+    flex-grow: 0
+    // Don't shrink
+    flex-shrink: 0
+    // Adjust the location
+    flex-basis: $icon-distance-size
+
+    text-align: center

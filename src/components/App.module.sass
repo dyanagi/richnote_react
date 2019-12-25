@@ -1,0 +1,72 @@
+@import responsiveness
+@import variablels_color
+@import variables_sidebar_icon
+@import variables_transition
+@import variablels_size
+@import variablels_z_index
+
+/*
+ *Side menu and main
+.container
+  display: flex
+  flex-wrap: nowrap
+
+  // Full screen
+  width: 100%
+  // Fallback
+  height: 100vh
+
+  max-height: 100vh
+
+  // Set the global variable with JavaScript
+  height: calc(var(--app-container-vh, 1vh) * 100)
+
+  .sidebar
+    // Don't grow
+    flex-grow: 0
+    // Don't shrink
+    flex-shrink: 0
+
+  .main
+    // Grow
+    flex-grow: 1
+    // Shrink
+    flex-shrink: 1
+
+// Sidebar
+.sidebar
+  height: 100%
+  width: $sidebar-size
+  position: fixed
+  z-index: $z-index-sidebar
+  top: 0
+  left: -9 - $sidebar-size
+
+  // Animation
+  // width is 0...so, hide the content.
+  overflow-x: hidden
+
+  transition: $transition-duration
+
+  // Decoration
+  box-shadow: 3px 0 6px $shadow-color
+  background-color: white
+
+  +mobile
+    &.pageNote.isActive
+      // Display by adding isActive class when Note is the current page on mobile
+      left: 0
+
+      +until($sidebar-size + 48px)
+        // When the screen is very small, cover all screen
+        width: 100%
+
+  +tablet
+    &.isActive
+      // Display by adding isActive class on tablet
+      left: 0
+
+  +desktop
+    // Always show
+    position: relative
+    left: 0

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from './NotesCards.module.scss'
+import styles from './NotesCards.module.sass'
 import NotesCard from './NotesCard'
 import cx from 'classnames'
 import * as PropTypes from 'prop-types'

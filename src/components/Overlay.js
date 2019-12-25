@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
-import styles from './Overlay.module.scss'
+import styles from './Overlay.module.sass'
 import * as PropTypes from 'prop-types'
 
 class Overlay extends Component {

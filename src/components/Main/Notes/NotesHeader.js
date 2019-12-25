@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './NotesHeader.module.scss'
+import styles from './NotesHeader.module.sass'
 import NewIconButton from '../../common/icon_buttons/NewIconButton'
 import MenuIconButton from '../../common/icon_buttons/MenuIconButton'
 import cx from 'classnames'

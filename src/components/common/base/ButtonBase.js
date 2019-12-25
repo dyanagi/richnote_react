@@ -1,7 +1,7 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
 import cx from 'classnames'
-import styles from './ButtonBase.module.scss'
+import styles from './ButtonBase.module.sass'
 
 function ButtonBase ({ className, label, onClick }) {
   return (

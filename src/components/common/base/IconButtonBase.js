@@ -1,6 +1,6 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
-import styles from './IconButtonBase.module.scss'
+import styles from './IconButtonBase.module.sass'
 import cx from 'classnames'
 import ImageButtonBase from './ImageButtonBase'
 

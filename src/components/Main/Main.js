@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
-import styles from './Main.module.scss'
+import styles from './Main.module.sass'
 import Notes from './Notes/Notes'
 import Note from './Note/Note'
 import * as PropTypes from 'prop-types'

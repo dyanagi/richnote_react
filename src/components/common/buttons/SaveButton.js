@@ -1,6 +1,6 @@
 import React from 'react'
 import ButtonBase from '../base/ButtonBase'
-import styles from './SaveButton.module.scss'
+import styles from './SaveButton.module.sass'
 import * as PropTypes from 'prop-types'
 
 function SaveButton ({ onClick }) {

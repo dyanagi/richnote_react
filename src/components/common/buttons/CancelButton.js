@@ -1,6 +1,6 @@
 import React from 'react'
 import ButtonBase from '../base/ButtonBase'
-import styles from './CancelButton.module.scss'
+import styles from './CancelButton.module.sass'
 
 function CancelButton () {
   return (

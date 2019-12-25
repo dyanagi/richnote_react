@@ -1,0 +1,23 @@
+@charset "utf-8"
+
+@import ../node_modules/bulma/sass/utilities/all
+@import ../node_modules/bulma/sass/base/all
+@import components/variablels_size
+@import components/variablels_color
+
+body
+  margin: 0
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background-color: $background-color
+
+  // Standard font size by default
+  font-size: $font-size
+
+  // Hide. Don't scroll by swiping in X-axis. (OK to scroll in Y-axis)
+  overflow-x: hidden
+
+// Don't highlight the button when it's selected or clicked. (Remove the light blue outline of buttons on Chrome)
+button:focus
+  outline: none

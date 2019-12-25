@@ -1,0 +1,50 @@
+@import ../../variablels_margin
+@import ../../variablels_color
+@import ../../variablels_size
+@import ../../variables_sidebar_icon
+
+.noteHeader
+  // Size
+  width: 100%
+  height: $header-height
+
+  // White space
+  padding-left: $outer-margin-left-and-right * 2 + $sidebar-icon-line-width
+  padding-right: $outer-margin-left-and-right / 4
+  // Push down the content to make space for the shadow
+  margin-bottom: 3px
+
+  // Layout the content
+  display: flex
+  align-items: center
+  flex-wrap: nowrap
+
+  // Design
+  background-color: #fff
+  box-shadow: 0 3px 6px $shadow-color
+
+  .label
+    // Grow this box
+    flex-grow: 1
+    // Shrink
+    flex-shrink: 1
+
+    // Text Layout
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+    // Design
+    font-size: $font-size-large
+    font-weight: bold
+    color: $label
+
+  .newBtn, .menuBtn
+    // Don't grow
+    flex-grow: 0
+    // Don't shrink
+    flex-shrink: 0
+    // Adjust the location
+    flex-basis: $icon-distance-size
+
+    text-align: center

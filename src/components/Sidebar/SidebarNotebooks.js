@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './SidebarNotebooks.module.scss'
+import styles from './SidebarNotebooks.module.sass'
 
 function SidebarNotebooks ({ notebooks }) {
   const notebookList = notebooks.map((notebook) => {

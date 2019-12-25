@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
-import styles from './SidebarIcon.module.scss'
+import styles from './SidebarIcon.module.sass'
 import * as PropTypes from 'prop-types'
 import { PAGE_NOTES } from '../constants/PageConstants'
 

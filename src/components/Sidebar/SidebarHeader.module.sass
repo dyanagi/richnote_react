@@ -1,0 +1,33 @@
+@import ../variablels_margin
+@import ../variablels_color
+@import ../variablels_size
+@import ../variables_sidebar_icon
+
+.sidebarHeader
+  // Size
+  width: 100%
+  height: $sidebar-icon-content-push-to-bottom
+
+  // White space
+  padding-right: $outer-margin-left-and-right / 4
+
+  // Layout the content
+  display: flex
+  align-items: center
+  flex-wrap: nowrap
+  justify-content: flex-end
+
+  // Push buttons to the right
+
+.newBtn, .menuBtn
+  // Layout
+  flex-grow: 0
+
+  // Don't grow
+  flex-shrink: 0
+
+  // Don't shrink
+  flex-basis: $icon-distance-size
+
+  // Adjust the location
+  text-align: center

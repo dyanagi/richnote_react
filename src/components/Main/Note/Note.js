@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Note.module.scss'
+import styles from './Note.module.sass'
 import NoteEditor from './NoteEditor'
 import NoteControlPanel from './NoteControlPanel'
 import NoteHeader from './NoteHeader'

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from './Notes.module.scss'
+import styles from './Notes.module.sass'
 import NotesHeader from './NotesHeader'
 import NotesCards from './NotesCards'
 import { connect } from 'react-redux'

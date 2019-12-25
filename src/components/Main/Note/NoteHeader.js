@@ -2,7 +2,7 @@ import React from 'react'
 import NoteHeaderMoveNoteButton from './NoteHeaderMoveNoteButton'
 import MenuIconButton from '../../common/icon_buttons/MenuIconButton'
 import * as PropTypes from 'prop-types'
-import styles from './NoteHeader.module.scss'
+import styles from './NoteHeader.module.sass'
 import cx from 'classnames'
 
 function NoteHeader (props) {

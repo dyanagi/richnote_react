@@ -1,6 +1,6 @@
 import React from 'react'
 import * as PropTypes from 'prop-types'
-import styles from './ImageButtonBase.module.scss'
+import styles from './ImageButtonBase.module.sass'
 import cx from 'classnames'
 
 function ImageButtonBase (props) {

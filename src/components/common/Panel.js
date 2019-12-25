@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Panel.module.scss'
+import styles from './Panel.module.sass'
 import * as PropTypes from 'prop-types'
 import cx from 'classnames'
 

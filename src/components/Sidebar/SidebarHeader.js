@@ -1,7 +1,7 @@
 import React from 'react'
 import NewIconButton from '../common/icon_buttons/NewIconButton'
 import MenuIconButton from '../common/icon_buttons/MenuIconButton'
-import styles from './SidebarHeader.module.scss'
+import styles from './SidebarHeader.module.sass'
 
 function SidebarHeader () {
   return (

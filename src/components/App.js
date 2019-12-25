@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from './App.module.scss'
+import styles from './App.module.sass'
 import Sidebar from './Sidebar/Sidebar'
 import cx from 'classnames'
 import { connect } from 'react-redux'

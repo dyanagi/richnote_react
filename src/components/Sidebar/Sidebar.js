@@ -1,6 +1,6 @@
 import React from 'react'
 import SidebarHeader from './SidebarHeader'
-import styles from './Sidebar.module.scss'
+import styles from './Sidebar.module.sass'
 import SidebarNotebooks from './SidebarNotebooks'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
