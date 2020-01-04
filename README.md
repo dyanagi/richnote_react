@@ -4,14 +4,23 @@
 
 ## Setup
 
-Dependency: Yarn (1.17.0+) needs to be installed before running the following commands.
+Dependency: Yarn (1.17+)
+
+### For Development
 
 ```bash
-# Install packages
 yarn install
-
-# Start the server
 yarn start
+```
+
+### For Production Build
+
+```bash
+yarn global add pm2
+chmod +x server.sh
+yarn install
+yarn build
+pm2 start --name "richnote_react" --interpreter bash server.sh
 ```
 
 ## Design Prototype
